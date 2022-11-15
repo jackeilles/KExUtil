@@ -25,3 +25,11 @@ cd KExUtil
 sudo python3 main.py
 ```
 
+<h3>Versions</h3>
+You may have noticed that there are 3 versions of the program.
+
+The version held in the folder named 'debug-ver' is a version made for debugging the program, it has higher verbosity and does not actually execute the commands, and instead prints them to the terminal.
+
+The mainNoComments.py version is going to be used for creating an executable version, not entirely sure why I've added this but oh well.
+
+The main version is main.py, the mainNoComments is the exact same as the main file, if edits are going to be made, please also edit the mainNoComments file accordingly.
