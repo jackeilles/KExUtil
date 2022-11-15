@@ -22,7 +22,7 @@ if exists("/bin/systemctl") == True:
     print("Package 'systemctl' is installed. Continuing...")
     sysctlEnabled = True # If it is then print to the log and set sysctlEnabled to True.
 else:
-    print("Package 'systemctl is not present, we will run the kexec command directly instead.")
+    print("Package 'systemctl' is not present, we will run the kexec command directly instead.")
 
 
 # Check if kexec is installed
@@ -76,8 +76,12 @@ if sel == "y": # If they do, then run the kexec command
         os.system(kexecCMD)
         os.system("systemctl kexec") # Run the kexec command
     else: # If systemctl is not installed, then run the kexec command directly
-        os.system(kexecCMD) # Run the kexec command
-        os.system("kexec -e") # Run the kexec command
+        kexecSel = input("This will ignore all running programs and shut down your system ungracefully. Are you sure you want to continue? (y/n): ") # Ask the user if they want to continue
+        if kexecSel == "y": # If they do, then run the kexec command
+            os.system(kexecCMD) # Run the kexec command
+            os.system("kexec -e") # Run the kexec command
+        else: # If they don't, then exit the program
+            print("Exiting...")
 elif sel == "n":
     exit("Exiting.") # If they don't, then exit the program.
 else:
