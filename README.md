@@ -10,7 +10,7 @@ This program makes use of the `kexec` command, found in `kexec-utils` to assist 
 <h3>Usage</h3>
 <b><u>As a dependency, this program requires Python 3.7 or higher.</u></b>
 
-To use KExUtil, you can clone the git repy by doing 
+To use KExUtil, you can clone the git repo by doing 
 `git clone https://github.com/ArykDev/KExUtil`.
 You can also download the `.tar.gz` file from the releases section of the repo.
 
